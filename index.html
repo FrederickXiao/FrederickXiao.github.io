@@ -3,42 +3,15 @@ layout: default
 ---
 
 <script type="text/javascript">
-$(function(){
+    $(function () {
+        $('.succesny').olvSlides({
+            thumb: true,
+            thumbPage: true,
+            thumbDirection: "Y",
+            effect: 'fade'
 
-	var interval;
-	$(".container img").click(function cover(){
-			$(this).addClass("zoom").fadeOut(700,append);
-			function append(){
-			$(this).removeClass("zoom").appendTo(".container").show();
-			var name = $(".container").children("img").first().attr("alt");
-			 $(".name p").text("No "+name);
-			}
-
-	})
-
-	function auto(){
-			var play = $(".container").children("img").first();
-			play.addClass("zoom").fadeOut(700,append);
-			function append(){
-			$(this).removeClass("zoom").appendTo(".container").show();
-			var name = $(this).parent().children("img").first().attr("alt");
-			 $(".name p").text("No "+name);
-			}
-			interval = setTimeout(auto,5000);
-	}
-
-	$(".container img").hover(function(){
-			stopPlay();
-	},function(){
-			interval = setTimeout(auto,5000);
-	})
-
-	function stopPlay(){
-		clearTimeout(interval)
-	}
-	auto();
-
-})
+        });
+    })
 </script>
 
 <!-- One -->
@@ -59,15 +32,49 @@ $(function(){
 <!-- Two -->
     <section id="two">
         <div class="container">
-            <div class="container_sub" style="margin-top:100px">
-                <img src="images/a1.png" alt="1" />
-                <img src="images/a2.png" alt="2" />
-                <img src="images/a3.png" alt="3" />
-                <img src="images/a4.png" alt="4" />
-                <img src="images/a5.png" alt="5" />
-            </div>
-            <div class="name">
-                <p>No 1</p>
+            <div class="successlunbo">
+                <div class="succesny">
+                    <div class="control">
+                        <ul class="change"></ul>
+                    </div>
+                    <div class="thumbWrap">
+                        <div class="thumbCont">
+                            <ul>
+                                <!-- img属性, url=url, text=描述, bigimg=大图, alt=标题  -->
+                                <li>
+                                    <div><img src="images/s1.jpg" url="url" bigImg="images/1.jpg" alt="标题1"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s2.jpg" url="url" bigImg="images/2.jpg" alt="标题2"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s3.jpg" url="url" bigImg="images/3.jpg" alt="标题3"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s4.jpg" url="url" bigImg="images/4.jpg" alt="标题4"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s5.jpg" url="url" bigImg="images/5.jpg" alt="标题5"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s1.jpg" url="url" bigImg="images/1.jpg" alt="标题6"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s2.jpg" url="url" bigImg="images/2.jpg" alt="标题7"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s3.jpg" url="url" bigImg="images/3.jpg" alt="标题8"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s4.jpg" url="url" bigImg="images/4.jpg" alt="标题9"></div>
+                                </li>
+                                <li>
+                                    <div><img src="images/s5.jpg" url="url" bigImg="images/5.jpg" alt="标题10"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
