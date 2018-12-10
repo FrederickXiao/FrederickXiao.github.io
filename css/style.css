@@ -1133,7 +1133,7 @@ a:hover {
 }
 
 .successlunbo {
-    width: 900px;
+    width: 700px;
     margin: 0 auto 10px;
 }
 /* sildes css begin */
@@ -1214,7 +1214,7 @@ a:hover {
     width: 49px;
     height: 49px;
     position: absolute;
-    bottom: 300px;
+    bottom: 100px;
     color: #FFF;
     font-size: 14px;
     z-index: 9;
@@ -1275,7 +1275,7 @@ a:hover {
 
 .thumbWrap {
     width: 145px;
-    height: 600px;
+    height: 400px;
     position: absolute;
     right: 0;
     top: 0;
