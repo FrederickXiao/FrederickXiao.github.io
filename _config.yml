@@ -1,1 +1,5 @@
 theme: yilia
+deploy:
+    type: git
+    repo: git@github.com:FrederickXiao/FrederickXiao.github.io.git  #这里的网址填你自己的
+    branch: master  
