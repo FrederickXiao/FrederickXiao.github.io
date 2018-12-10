@@ -2,7 +2,44 @@
 layout: default
 ---
 
+<script type="text/javascript">
+$(function(){
 
+	var interval;
+	$(".container img").click(function cover(){
+			$(this).addClass("zoom").fadeOut(700,append);
+			function append(){
+			$(this).removeClass("zoom").appendTo(".container").show();
+			var name = $(".container").children("img").first().attr("alt");
+			 $(".name p").text("No "+name);
+			}
+
+	})
+
+	function auto(){
+			var play = $(".container").children("img").first();
+			play.addClass("zoom").fadeOut(700,append);
+			function append(){
+			$(this).removeClass("zoom").appendTo(".container").show();
+			var name = $(this).parent().children("img").first().attr("alt");
+			 $(".name p").text("No "+name);
+			}
+			interval = setTimeout(auto,5000);
+	}
+
+	$(".container img").hover(function(){
+			stopPlay();
+	},function(){
+			interval = setTimeout(auto,5000);
+	})
+
+	function stopPlay(){
+		clearTimeout(interval)
+	}
+	auto();
+
+})
+</script>
 
 <!-- One -->
     <section id="one">
@@ -13,6 +50,7 @@ layout: default
             </header>
             <p>
                 花褪残红青杏小。 燕子飞时， 绿水人家绕。 枝上柳绵吹又少， 天涯何处无芳草。
+                <br />
                 墙里秋千墙外道。 墙外行人， 墙里佳人笑。 笑渐不闻声渐悄， 多情却被无情恼。
             </p>
         </div>
@@ -21,16 +59,16 @@ layout: default
 <!-- Two -->
     <section id="two">
         <div class="container">
-            <h3>Things I Can Do</h3>
-            <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
-            <ul class="feature-icons">
-                <li class="fa-code">Write all the code</li>
-                <li class="fa-cubes">Stack small boxes</li>
-                <li class="fa-book">Read books and stuff</li>
-                <li class="fa-coffee">Drink much coffee</li>
-                <li class="fa-bolt">Lightning bolt</li>
-                <li class="fa-users">Shadow clone technique</li>
-            </ul>
+            <div class="container_sub" style="margin-top:100px">
+                <img src="images/a1.png" alt="1" />
+                <img src="images/a2.png" alt="2" />
+                <img src="images/a3.png" alt="3" />
+                <img src="images/a4.png" alt="4" />
+                <img src="images/a5.png" alt="5" />
+            </div>
+            <div class="name">
+                <p>No 1</p>
+            </div>
         </div>
     </section>
 
