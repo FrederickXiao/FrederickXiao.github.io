@@ -1139,8 +1139,8 @@ a:hover {
 /* sildes css begin */
 
 .control {
-    width: 757px;
-    height: 600px;
+    width: 557px;
+    height: 400px;
     background: #282828;
     display: block;
     position: absolute;
@@ -1150,7 +1150,7 @@ a:hover {
 }
 
 .change li {
-    width: 757px;
+    width: 557px;
     overflow: hidden;
     text-align: center
 }
@@ -1158,18 +1158,18 @@ a:hover {
 
 .change li .imgWrap {
     display: table-cell;
-    width: 757px;
-    height: 600px;
+    width: 557px;
+    height: 400px;
     vertical-align: middle;
     cursor: pointer;
     *font-size: 500px;
 }
 
 .change li img {
-    max-width: 757px;
-    max-height: 600px;
-    width: expression(this.width > 757 && this.width > this.height ? 600: true);
-    height: expression(this.height >757 ? 600: true);
+    max-width: 557px;
+    max-height: 400px;
+    width: expression(this.width > 557 && this.width > this.height ? 400: true);
+    height: expression(this.height >557 ? 400: true);
     vertical-align: middle;
     overflow: hidden
 }
